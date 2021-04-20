@@ -13,11 +13,13 @@ public class NavmeshAgentScript : MonoBehaviour {
     {
         agent = GetComponent<NavMeshAgent>();
         target = GameObject.FindGameObjectWithTag("Player").transform;
+        Debug.Log("zombie found player");
 	}
 	
 	// Update is called once per frame
 	void Update () 
     {
         agent.SetDestination(target.position);
-	}
+        Debug.Log("zombie moving toward player");
+    }
 }
