@@ -1,0 +1,9 @@
+- too cramped
+
+- bug involving infinite respawns somewhere on ramp
+
+- zombies floating over platform
+
+- respawns too fast 
+
+- zombies spawn on one side of the platform
