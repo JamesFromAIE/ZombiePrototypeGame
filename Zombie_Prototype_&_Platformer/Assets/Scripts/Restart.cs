@@ -33,7 +33,7 @@ public class Restart : MonoBehaviour
     [System.Obsolete]
     void OnTriggerEnter(Collider other)
     {
-        Application.LoadLevel("MyScene");
+        Application.LoadLevel("WholeScene");
     }
 
 }
