@@ -9,7 +9,7 @@ public class Restart : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-       
+        NewLevelManager = GameObject.FindGameObjectWithTag("NewLevelManager");
     }
 
     // Update is called once per frame

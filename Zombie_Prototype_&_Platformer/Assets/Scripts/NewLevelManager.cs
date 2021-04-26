@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class NewLevelManager : MonoBehaviour
 {
@@ -13,6 +14,8 @@ public class NewLevelManager : MonoBehaviour
     public Text healthText;
     public Text winText;
     public int killsTillLastWave = 20;
+    private int zombieNumber;
+    private float winTime = 4.0f;
 
     // Start is called before the first frame update
     void Start()
@@ -20,7 +23,9 @@ public class NewLevelManager : MonoBehaviour
         // Links in-game Kill-cap to script Kill-cap
         killsTillLastWaveText.text = "Kills until Last Wave: " + killsTillLastWave;
 
-        winText.gameObject.SetActive(false);
+        winText.text = "";
+
+        zombieNumber = GameObject.FindGameObjectsWithTag("Enemy").Length;
     }
 
     // Update is called once per frame
@@ -33,13 +38,29 @@ public class NewLevelManager : MonoBehaviour
         scoreText.text = "Score: " + score;
         healthText.text = "Health: " + health;
 
-        if (score >= killsTillLastWave)
+        zombieNumber = GameObject.FindGameObjectsWithTag("Enemy").Length;
+
+
+        if (score > killsTillLastWave && zombieNumber == 0)
+                                     
         {
-            winText.gameObject.SetActive(true);
-            Debug.Log("The winText function is running");
+            winText.text = "YOU WIN!";
+            restartScene();
         }
   
     }
+    void restartScene()
+    {
 
+        //winTime starts COUNTING DOWN
+        winTime -= Time.deltaTime;
+
+        if (winTime < 0)
+        {
+            SceneManager.LoadScene("WholeScene");
+        }
+    }
+        
+        
 
 }

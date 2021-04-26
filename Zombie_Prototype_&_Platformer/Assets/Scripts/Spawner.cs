@@ -26,8 +26,7 @@ public class Spawner : MonoBehaviour
             if (newLevelManager.score == newLevelManager.killsTillLastWave)
             {
                 Invoke("FinalSpawnEnemy", 1);
-                _hasRun = true;
-                Debug.Log("The score matched the last wave");
+                _hasRun = true;                
             }
         }     
     }
