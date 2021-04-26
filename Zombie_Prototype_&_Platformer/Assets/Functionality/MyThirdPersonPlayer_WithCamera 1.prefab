@@ -70,7 +70,7 @@ Camera:
   m_TargetDisplay: 0
   m_TargetEye: 3
   m_HDR: 1
-  m_AllowMSAA: 1
+  m_AllowMSAA: 0
   m_AllowDynamicResolution: 0
   m_ForceIntoRT: 0
   m_OcclusionCulling: 1
@@ -116,7 +116,7 @@ GameObject:
   - component: {fileID: 2270314369727934000}
   - component: {fileID: 6030565627048504844}
   m_Layer: 0
-  m_Name: ThirdPersonPlayer_WithCamera 1
+  m_Name: MyThirdPersonPlayer_WithCamera 1
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
