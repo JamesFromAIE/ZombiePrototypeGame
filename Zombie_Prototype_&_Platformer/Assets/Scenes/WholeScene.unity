@@ -107,15 +107,15 @@ NavMeshSettings:
   m_BuildSettings:
     serializedVersion: 2
     agentTypeID: 0
-    agentRadius: 0.12
+    agentRadius: 0.36
     agentHeight: 2
-    agentSlope: 60
-    agentClimb: 0.4
+    agentSlope: 7.5
+    agentClimb: 0.74
     ledgeDropHeight: 0
     maxJumpAcrossDistance: 0
     minRegionArea: 2
     manualCellSize: 0
-    cellSize: 0.04
+    cellSize: 0.120000005
     manualTileSize: 0
     tileSize: 256
     accuratePlacement: 0
@@ -1378,7 +1378,7 @@ PrefabInstance:
     - target: {fileID: 3087330352673373967, guid: 31b0c7e8218f44727987d94a4cd20aaa,
         type: 3}
       propertyPath: timeBetweenSpawns
-      value: 3
+      value: 1.75
       objectReference: {fileID: 0}
     - target: {fileID: 3087330352673373967, guid: 31b0c7e8218f44727987d94a4cd20aaa,
         type: 3}
@@ -13678,6 +13678,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2270314369727934000, guid: 23035f09d042a0a47b9f644c4e6c53f5,
+        type: 3}
+      propertyPath: speed
+      value: 4.5
+      objectReference: {fileID: 0}
     - target: {fileID: 8065994541674989797, guid: 23035f09d042a0a47b9f644c4e6c53f5,
         type: 3}
       propertyPath: m_AllowMSAA
@@ -13747,6 +13752,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: MyThirdPersonPlayer_WithCamera 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8102339211595489374, guid: 23035f09d042a0a47b9f644c4e6c53f5,
+        type: 3}
+      propertyPath: gunFireRate
+      value: 0.75
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 23035f09d042a0a47b9f644c4e6c53f5, type: 3}
@@ -15137,7 +15147,7 @@ PrefabInstance:
     - target: {fileID: 3087330352673373967, guid: 31b0c7e8218f44727987d94a4cd20aaa,
         type: 3}
       propertyPath: timeBetweenSpawns
-      value: 3
+      value: 1.75
       objectReference: {fileID: 0}
     - target: {fileID: 3087330352673373967, guid: 31b0c7e8218f44727987d94a4cd20aaa,
         type: 3}
