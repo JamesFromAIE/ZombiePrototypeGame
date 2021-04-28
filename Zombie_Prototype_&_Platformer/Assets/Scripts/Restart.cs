@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Restart : MonoBehaviour
 {
@@ -30,10 +31,10 @@ public class Restart : MonoBehaviour
     }
 
 
-    [System.Obsolete]
+  
     void OnTriggerEnter(Collider other)
     {
-        Application.LoadLevel("WholeScene");
+        SceneManager.LoadScene("CompleteScene");
     }
 
 }
