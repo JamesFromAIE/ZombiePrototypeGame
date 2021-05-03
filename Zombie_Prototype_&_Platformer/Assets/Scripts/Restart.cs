@@ -35,6 +35,7 @@ public class Restart : MonoBehaviour
     void OnTriggerEnter(Collider other)
     {
         SceneManager.LoadScene("CompleteScene");
+        Debug.Log("Level Reset");
     }
 
 }
