@@ -57,7 +57,7 @@ public class NewLevelManager : MonoBehaviour
 
         if (winTime < 0)
         {
-            SceneManager.LoadScene("CompleteScene");
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
     }
         

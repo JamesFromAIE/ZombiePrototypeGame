@@ -11,6 +11,8 @@ public class Restart : MonoBehaviour
     void Start()
     {
         NewLevelManager = GameObject.FindGameObjectWithTag("NewLevelManager");
+
+
     }
 
     // Update is called once per frame
@@ -27,16 +29,11 @@ public class Restart : MonoBehaviour
             NewLevelManager.GetComponent<NewLevelManager>().score++;
             Instantiate(splatEffect, collision.transform.position, Quaternion.identity);
             Destroy(collision.gameObject);
-        }       
-    }
+        }
 
-
-  
-    void OnTriggerEnter(Collider other)
-    {
-        SceneManager.LoadScene("CompleteScene");
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         Debug.Log("Level Reset");
-    }
 
+    }
 }
 
