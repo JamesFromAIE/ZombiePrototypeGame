@@ -108,8 +108,8 @@ NavMeshSettings:
     agentTypeID: 0
     agentRadius: 0.09
     agentHeight: 2.25
-    agentSlope: 56.7
-    agentClimb: 0.68
+    agentSlope: 52
+    agentClimb: 0.24
     ledgeDropHeight: 0
     maxJumpAcrossDistance: 0
     minRegionArea: 2
@@ -2839,8 +2839,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 456107463}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 11.14, y: -7.5, z: 5.7}
-  m_LocalScale: {x: 25.13525, y: 1, z: 25.896}
+  m_LocalPosition: {x: 11.14, y: -7.5, z: 3.49}
+  m_LocalScale: {x: 37.536983, y: 1, z: 28.262012}
   m_Children: []
   m_Father: {fileID: 1119814581}
   m_RootOrder: 7
@@ -11108,7 +11108,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1606356452}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 32.56, y: -20, z: 1}
+  m_LocalPosition: {x: 37.82, y: -20, z: 1}
   m_LocalScale: {x: 1.5, y: 40, z: 1.5}
   m_Children: []
   m_Father: {fileID: 58189135}
@@ -11840,7 +11840,7 @@ PrefabInstance:
     - target: {fileID: 3278928635457569150, guid: 05fc8123d0bb3684080fc3f8512f6fa5,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 3278928635457569150, guid: 05fc8123d0bb3684080fc3f8512f6fa5,
         type: 3}
@@ -11989,7 +11989,7 @@ PrefabInstance:
     - target: {fileID: 3278928635457569150, guid: 05fc8123d0bb3684080fc3f8512f6fa5,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 3278928635457569150, guid: 05fc8123d0bb3684080fc3f8512f6fa5,
         type: 3}
