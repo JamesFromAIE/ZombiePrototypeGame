@@ -31,9 +31,17 @@ public class Restart : MonoBehaviour
             Destroy(collision.gameObject);
         }
 
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-        Debug.Log("Level Reset");
 
     }
+
+    void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("Player"))
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            Debug.Log("Level Reset");
+        }
+    }
+
 }
 
