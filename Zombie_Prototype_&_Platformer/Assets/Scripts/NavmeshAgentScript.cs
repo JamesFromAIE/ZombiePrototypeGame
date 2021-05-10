@@ -5,19 +5,22 @@ using UnityEngine.AI;
 
 public class NavmeshAgentScript : MonoBehaviour {
 
-    public Transform target;
+    private Transform target;
+    public float speed;
     NavMeshAgent agent; 
 
     // Use this for initialization
 	void Start () 
     {
-        agent = GetComponent<NavMeshAgent>();
+       // agent = GetComponent<NavMeshAgent>();
         target = GameObject.FindGameObjectWithTag("Player").transform;       
 	}
 	
 	// Update is called once per frame
 	void Update () 
     {
-        agent.SetDestination(target.position);        
+        transform.LookAt(target);
+        transform.Translate(new Vector3(0, 0, transform.localPosition.z) * speed * Time.deltaTime);
+        //agent.SetDestination(target.position);        
     }
 }

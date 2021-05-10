@@ -10,6 +10,12 @@ public class PlayerController : MonoBehaviour
     private bool isGrounded;
     public bool allowDoubleJump = false;
     private int amountOfJumps = 0;
+    private Rigidbody rb;
+
+    private void Awake()
+    {
+        rb = GetComponent<Rigidbody>();
+    }
 
     // Start is called before the first frame update
     void Start()
@@ -55,13 +61,13 @@ public class PlayerController : MonoBehaviour
             if (isGrounded)
             {
                 // turn on the cursor
-                GetComponent<Rigidbody>().AddForce(new Vector3(0.0f, jumpForce, 0.0f));
+                rb.AddForce(new Vector3(0.0f, jumpForce, 0.0f));
                 amountOfJumps = 1;
             }
             else if (amountOfJumps < 2 && allowDoubleJump)
             {
                 // turn on the cursor
-                GetComponent<Rigidbody>().AddForce(new Vector3(0.0f, jumpForce, 0.0f));
+                rb.AddForce(new Vector3(0.0f, jumpForce, 0.0f));
                 amountOfJumps = 2;
             }
 

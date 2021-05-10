@@ -22,22 +22,16 @@ public class Restart : MonoBehaviour
     }
 
     // Collision Function
-    private void OnCollisionEnter(Collision collision)
+    private void OnTriggerEnter(Collider other)
     {
         // When Enemy collides with Death
-        if (collision.gameObject.tag == "Enemy")
+        if (other.CompareTag("Enemy"))
         {
             NewLevelManager.GetComponent<NewLevelManager>().score++;
-            Instantiate(splatEffect, collision.transform.position, Quaternion.identity);
-            Destroy(collision.gameObject);
+            Instantiate(splatEffect, other.transform.position, Quaternion.identity);
+            Destroy(other.gameObject);
         }
 
-
-    }
-
-    // Collider Function
-    void OnTriggerEnter(Collider other)
-    {
         // If Player collides with 'Death'
         if (other.gameObject.CompareTag("Player"))
         {
@@ -45,6 +39,5 @@ public class Restart : MonoBehaviour
             Debug.Log("Level Reset");
         }
     }
-
 }
 
