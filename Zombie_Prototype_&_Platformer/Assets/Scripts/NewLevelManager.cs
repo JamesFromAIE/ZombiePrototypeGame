@@ -23,8 +23,10 @@ public class NewLevelManager : MonoBehaviour
         // Links in-game Kill-cap to script Kill-cap
         killsTillLastWaveText.text = "Kills until Last Wave: " + killsTillLastWave;
 
+        //Text is there, but without text
         winText.text = "";
 
+        //Finds the number of Zombies in the Scene at the First Frame
         zombieNumber = GameObject.FindGameObjectsWithTag("Enemy").Length;
     }
 
@@ -38,9 +40,10 @@ public class NewLevelManager : MonoBehaviour
         scoreText.text = "Score: " + score;
         healthText.text = "Health: " + health;
 
+        //Finds the number of Zombies in the Scene at ALL Times
         zombieNumber = GameObject.FindGameObjectsWithTag("Enemy").Length;
 
-
+        //If ALL zombies are Dead
         if (score > killsTillLastWave && zombieNumber == 0)
                                      
         {
@@ -55,6 +58,7 @@ public class NewLevelManager : MonoBehaviour
         //winTime starts COUNTING DOWN
         winTime -= Time.deltaTime;
 
+        //If time hits 0, Restart Scene
         if (winTime < 0)
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);

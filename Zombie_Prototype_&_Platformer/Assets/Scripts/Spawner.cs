@@ -14,17 +14,21 @@ public class Spawner : MonoBehaviour
 
     // Start is called before the first frame update
     void Start()
-    {  //The first zombie to spawnm
+    { 
+       //Keep spawning zombies
        InvokeRepeating("SpawnEnemy", 1.0f, timeBetweenSpawns);
     }
 
     // Update is called once per frame
     void Update()
     {
+        //Run Once
         if (!_hasRun)
         {            
+            //if Kill cap is reached
             if (newLevelManager.score == newLevelManager.killsTillLastWave)
             {
+                //Spawn last wave after 1 second
                 Invoke("FinalSpawnEnemy", 1);
                 _hasRun = true;                
             }
@@ -39,6 +43,7 @@ public class Spawner : MonoBehaviour
             Instantiate(enemyPrefab, transform.position, Quaternion.identity);
         }
 	}
+    //How Final Enemies Spawn
     void FinalSpawnEnemy()
     {
         Instantiate(enemyPrefab, transform.position, Quaternion.identity);

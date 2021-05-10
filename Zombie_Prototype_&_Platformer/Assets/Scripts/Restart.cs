@@ -21,6 +21,7 @@ public class Restart : MonoBehaviour
         
     }
 
+    // Collision Function
     private void OnCollisionEnter(Collision collision)
     {
         // When Enemy collides with Death
@@ -34,8 +35,10 @@ public class Restart : MonoBehaviour
 
     }
 
+    // Collider Function
     void OnTriggerEnter(Collider other)
     {
+        // If Player collides with 'Death'
         if (other.gameObject.CompareTag("Player"))
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);

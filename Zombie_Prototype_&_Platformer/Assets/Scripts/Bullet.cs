@@ -11,8 +11,10 @@ public class Bullet : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        // Identify NewLevelManager
         NewLevelManager = GameObject.FindGameObjectWithTag("NewLevelManager");
 
+        // Bullet Movement and Speed
         gameObject.GetComponent<Rigidbody>().velocity = transform.forward * bulletSpeed;
         
         // DestroySelf after 5 seconds
