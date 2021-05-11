@@ -3,25 +3,37 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor;
 
+
 public class Spawner : MonoBehaviour
 {
     public NewLevelManager newLevelManager;
     public GameObject enemyPrefab;
     public float timeBetweenSpawns = 5.0f;
+    public float timeUntilSpawn = 0f;
     public bool spawn = true;
     private bool _hasRun = false;
 
 
     // Start is called before the first frame update
     void Start()
-    { 
-       //Keep spawning zombies
-       InvokeRepeating("SpawnEnemy", 1.0f, timeBetweenSpawns);
+    {
+
     }
 
     // Update is called once per frame
     void Update()
     {
+
+        timeUntilSpawn -= Time.deltaTime;
+
+        if (timeUntilSpawn <= 0)
+        {
+            //Keep spawning zombies
+            InvokeRepeating("SpawnEnemy", 1.0f, timeBetweenSpawns);
+            timeUntilSpawn = 1000;
+        }
+
+
         //Run Once
         if (!_hasRun)
         {            

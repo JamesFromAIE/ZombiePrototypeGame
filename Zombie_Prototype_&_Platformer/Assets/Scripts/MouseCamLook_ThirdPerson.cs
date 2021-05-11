@@ -13,6 +13,8 @@ public class MouseCamLook_ThirdPerson : MonoBehaviour
     public GameObject character;
     //head 
     public GameObject head;
+    //gun
+    public GameObject gun;
     // get the incremental value of mouse moving
     private Vector2 mouseLook;
     // smooth the mouse moving
@@ -26,6 +28,7 @@ public class MouseCamLook_ThirdPerson : MonoBehaviour
     {
         character = this.transform.parent.gameObject.transform.parent.gameObject;
         head = this.transform.parent.gameObject;
+        gun = this.transform.parent.gameObject;
         initialAngle = character.transform.localEulerAngles.y;
 
     }
@@ -46,7 +49,7 @@ public class MouseCamLook_ThirdPerson : MonoBehaviour
 
         head.transform.localRotation = Quaternion.AngleAxis(- mouseLook.y * 0.5f, Vector3.right);
         character.transform.localRotation = Quaternion.AngleAxis(initialAngle + mouseLook.x, Vector3.up);
-
+        gun.transform.localRotation = Quaternion.AngleAxis(-mouseLook.y * 0.5f, Vector3.right);
 
 
     }
